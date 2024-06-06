@@ -1,0 +1,11 @@
+.carousel-button {
+  position: absolute;
+  top: 50%; // Adjust this value to position the button vertically
+  left: 50%; // Adjust this value to position the button horizontally
+  transform: translate(-50%, -50%); // Center the button
+  z-index: 10; // Ensure the button is above the image
+}
+// src/App.scss
+// src/App.scss
+
+

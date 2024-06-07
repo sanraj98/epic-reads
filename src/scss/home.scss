@@ -1,11 +1,43 @@
 .carousel-button {
   position: absolute;
   top: 50%; // Adjust this value to position the button vertically
-  left: 50%; // Adjust this value to position the button horizontally
-  transform: translate(-50%, -50%); // Center the button
+  left: 15%; // Adjust this value to position the button horizontally
+  transform: translate(-50%, 250%); // Center the button
   z-index: 10; // Ensure the button is above the image
 }
-// src/App.scss
-// src/App.scss
+.banner1 {
+  height: 450px;
+  position:relative;
+  background-image: url('../images/book-banner1.jpg'); /* Replace with your banner image URL */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 150px 0;
+  z-index:0;
+}
+.banner2 {
+  height: 450px;
+  position:relative;
+  background-image: url('../images/banner2.jpg'); /* Replace with your banner image URL */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 150px 0;
+  z-index:0;
+}
+
+.banner3 {
+  height: 450px;
+  position:relative;
+  background-image: url('../images/banner3.jpg'); /* Replace with your banner image URL */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 150px 0;
+  z-index:0;
+}
 
 

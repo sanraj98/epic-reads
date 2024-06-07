@@ -1,25 +1,30 @@
 import React from 'react'
-import banner1 from '../../images/book-banner1.jpg';
 import '../../scss/home.scss';
-import { Carousel, Button } from 'react-bootstrap';
 
 
 
 export const CarouselItem = () => {
   return (
     <>
-         <Carousel>
-          <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src={banner1}
-          alt="First slide"
-        />
-        <Carousel.Caption>
-          <Button className="carousel-button" variant="dark">explore more</Button>
-        </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
+         <div id="carouselExampleSlidesOnly" className="carousel slide" data-bs-ride="carousel">
+         <div className="carousel-inner">
+          <div className="carousel-item active">
+            <div className="banner1">
+              <button className='btn btn-dark carousel-button btn-lg'>Explore more</button>
+            </div>
+           </div>
+           <div className="carousel-item">
+            <div className="banner2">
+            ji
+            </div>
+           </div>
+           <div className="carousel-item">
+            <div className="banner3">
+            ja
+            </div>
+           </div>
+          </div>
+        </div>
     </>
   )
 }

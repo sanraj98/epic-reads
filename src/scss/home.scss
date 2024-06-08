@@ -1,7 +1,7 @@
 .carousel-button {
   position: absolute;
   top: 50%; // Adjust this value to position the button vertically
-  left: 15%; // Adjust this value to position the button horizontally
+  left: 12%; // Adjust this value to position the button horizontally
   transform: translate(-50%, 250%); // Center the button
   z-index: 10; // Ensure the button is above the image
 }
@@ -38,6 +38,10 @@
   text-align: center;
   padding: 150px 0;
   z-index:0;
+}
+
+.border-ic{
+  width: 20% !important;
 }
 
 

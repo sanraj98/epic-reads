@@ -7,8 +7,8 @@ import '../scss/asset.scss';
 
 export const Header = () => {
   return (
-<div>
-<nav className="navbar navbar-expand-lg bg-body-tertiary mt-2 shadow p-3">
+
+<nav className="navbar navbar-expand-lg bg-body-tertiary mt-2 shadow sticky-top p-3">
   <div className="container-fluid">
     <a className="navbar-brand" href="#">
       <img src={epic_book} alt="epic logo" width={35} height={35}/>
@@ -27,7 +27,6 @@ export const Header = () => {
    
   </div> 
 </nav>
-</div>
   )
 }
 

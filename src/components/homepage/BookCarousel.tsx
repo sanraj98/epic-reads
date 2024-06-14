@@ -6,7 +6,7 @@ export const BookCarousel = () => {
   return (
     <div className='container bookcarousel' style={{height:550}}>
         <div className="carousel-title">
-            <h3>Recent books are arived stay up stuned</h3>
+            <h3>Recently books are arived stay up stuned</h3>
             <hr />
         </div>
         <div id='carouselExampleControls' className="carousel carousel-dark slide mt-5 d-none d-lg-block">

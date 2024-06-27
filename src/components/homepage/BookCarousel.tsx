@@ -5,7 +5,9 @@ import BookModel from '../../models/BookModel';
 
 
 export const BookCarousel = () => {
-    const [books,setBooks] = useState<BookModel[]>([]);
+    const [books, setBooks] = useState<BookModel[]>([]);
+    const [isLoading, setIsLoading] =useState(true);
+    const [httpError,setHttpError]= useState(null);
     useEffect(() => {
         const url = "http://localhost:9090/api/books";
         
@@ -33,14 +35,31 @@ export const BookCarousel = () => {
                     });
                 }
                 setBooks(loadedBooks);
+                setIsLoading(false);
             } catch (error) {
                 console.error('Error fetching the books:', error);
             }
         };
 
-        listOfBooks();
+        listOfBooks().catch((error: any) => {
+            setIsLoading(false);
+            setHttpError(error.message);
+        });
     }, []);
-
+    if (isLoading) {
+        return (
+            <div className="container m-5">
+                <p>Loading...</p>
+            </div>
+        );
+    }
+    if (httpError) {
+        return (
+            <div className="container m-5">
+                <p>{httpError}</p>
+            </div>
+        );
+    }
   return (
     <div className='container bookcarousel' style={{height:550}}>
         <div className="carousel-title">
@@ -60,7 +79,7 @@ export const BookCarousel = () => {
                 </div>
                 <div className="carousel-item">
                     <div className="row d-flex justify-content-center">
-                    {books.slice(3,6).map(book=>(
+                    {books.slice(0,3).map(book=>(
                          <ReturnBooks book={book} key={book.id} />
                         )
                         )}
@@ -79,7 +98,7 @@ export const BookCarousel = () => {
         {/* mobile */}
         <div className="d-lg-none mt-3">
         <div className="row d-flex justify-content-center">
-            <ReturnBooks book={books[10]}/>
+            <ReturnBooks book={books[0]}/>
             <button className='btn btn-outline-primary'>view more</button>
             </div>
         </div>

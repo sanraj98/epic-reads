@@ -48,8 +48,9 @@ export const BookCarousel = () => {
     }, []);
     if (isLoading) {
         return (
-            <div className="container m-5">
-                <p>Loading...</p>
+            <div className="container text-center m-5">
+                <div className="spinner-border text-primary" role="status"></div>
+                
             </div>
         );
     }
@@ -79,7 +80,15 @@ export const BookCarousel = () => {
                 </div>
                 <div className="carousel-item">
                     <div className="row d-flex justify-content-center">
-                    {books.slice(0,3).map(book=>(
+                    {books.slice(3,6).map(book=>(
+                         <ReturnBooks book={book} key={book.id} />
+                        )
+                        )}
+                    </div>
+                </div>
+                <div className="carousel-item">
+                    <div className="row d-flex justify-content-center">
+                    {books.slice(6,9).map(book=>(
                          <ReturnBooks book={book} key={book.id} />
                         )
                         )}

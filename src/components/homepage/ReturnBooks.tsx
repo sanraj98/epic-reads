@@ -7,7 +7,7 @@ export const ReturnBooks:React.FC<{book:BookModel}> = (props) => {
     <div className="col-xs-6 col-sm-6 col-md-4 col-lg-3 mb-4">
         <div className="text-center">
         {props.book.img ? (
-                        <img src={props.book.img} alt={props.book.title} height={233} width={151} />
+                        <img src={`data:image/png;base64,${props.book.img}`} alt={props.book.title} height={233} width={151} />
                     ) : (
                         <div>No image available</div>
                     )}        <p className='mt-1'>{props.book.title}</p>

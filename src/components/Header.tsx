@@ -26,7 +26,7 @@ export const Header = () => {
         </a>
       </li>
       <li className='nav-item ms-3 mt-sm-4 mt-lg-0'>
-        <button className='btn btn-primary rounded-pill'>My Account</button>
+        <button className='btn btn-primary rounded-1'>My Account</button>
       </li>
     </ul>
     </div>

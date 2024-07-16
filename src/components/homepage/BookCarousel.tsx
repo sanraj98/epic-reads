@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import '../../scss/bookcarousel.scss';
 import { ReturnBooks } from './ReturnBooks';
 import BookModel from '../../models/BookModel';
+import { SpinnerLoading } from '../utils/SpinnerLoading';
 
 
 export const BookCarousel = () => {
@@ -48,10 +49,7 @@ export const BookCarousel = () => {
     }, []);
     if (isLoading) {
         return (
-            <div className="container text-center m-5">
-                <div className="spinner-border text-primary" role="status"></div>
-                
-            </div>
+            <SpinnerLoading />
         );
     }
     if (httpError) {
